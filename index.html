@@ -4,9 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Library || TOP</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Library Project</h1>
+        <button id="add-books">Add Book</button>
+    </header>
+    <main>
+        <section id="books">
+
+        </section>
+        <form id="form">
+            <input type="text" placeholder="Book title" id="bookTitle" required />
+            <input type="text" placeholder="Author" id="author" required />
+            <input type="number" placeholder="Pages" id="pages" required />
+            <p><input type="checkbox" id="check">Have you read it?</p>
+            <button type="submit" id="submit" value="Submit" >Submit</button>
+        </form>
+    </main>
+    <script src="./index.js"></script>
 </body>
 </html>
