@@ -58,4 +58,11 @@ header{
     height: 200px;
     margin: 0 auto;
     font-family: monospace;
+
 }
+.read{
+    border: 3px solid green;
+}
+.card:not(.read) {
+    border: 3px solid red;
+  }

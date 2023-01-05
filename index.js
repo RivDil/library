@@ -15,8 +15,18 @@ let myLibrary = [
     pages: 75,
     readed: 'Yes',
   },
-  {},
-  {},
+  {
+    title:'100 años de soledad',
+    author:'Miguel Garcia Marquez',
+    pages:500,
+    readed: 'Yes',
+  },
+  {
+    title:'Les Miserables',
+    author:'Victor Hugo',
+    pages: 1000,
+    readed: 'No',
+  },
 ];
 
 
@@ -68,6 +78,12 @@ function displayBooks(){
     let book = myLibrary[i];
     let card = document.createElement('div'); 
     card.classList.add('card'); 
+
+    // Add read status class to card based on book's readed property
+    if (book.readed === 'Yes') {
+      card.classList.add('read');
+    }
+
     card.innerHTML = `
       <div class="card-header"><h3>
         ${book.title}
@@ -76,17 +92,27 @@ function displayBooks(){
         <p>Author: ${book.author}</p>
         <p>Pages: ${book.pages}</p>
         <p id='readbtn'>Did you read it?:  ${book.readed}</p>
+        <button id="changeBtn" onclick='changeRead(${i})'>change read status</button>
         <button id="eraser" onclick='eraseBook(${i})'>Erase Book</button>
       </div>
     `;
-    if(book.readed == 'Yes'){
-      card.style.background = 'green'
-    }else{
-      card.style.background = 'red'
-    }
     books.appendChild(card);
   }
 }
+function changeRead(e){   
+  let cards = document.getElementsByClassName('card'); 
+  let card = cards[e];
+  if (myLibrary[e].readed == 'Yes'){
+    myLibrary[e].readed = 'No';
+    card.classList.remove('read')
+  }else{
+    myLibrary[e].readed = 'Yes'
+    card.classList.add('read');
+  }
+  displayBooks()
+}
+
+
 function eraseBook(i){
   console.log(i)
   myLibrary.splice(i,1);
