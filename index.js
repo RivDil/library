@@ -85,14 +85,15 @@ function displayBooks(){
     }
 
     card.innerHTML = `
-      <div class="card-header"><h3>
+      <div class="card-header"><h2>
         ${book.title}
-      </h3></div>
+      </h2></div>
       <div class="card-body">
         <p>Author: ${book.author}</p>
         <p>Pages: ${book.pages}</p>
-        <p id='readbtn'>Did you read it?:  ${book.readed}</p>
-        <button id="changeBtn" onclick='changeRead(${i})'>change read status</button>
+        <div id='toggleBtn'>
+        <div id='change-div' onclick='changeRead(${i})'><button id="changeBtn" >${book.readed}</button></div>
+        </div>
         <button id="eraser" onclick='eraseBook(${i})'>Erase Book</button>
       </div>
     `;
