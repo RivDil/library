@@ -10,23 +10,23 @@ const books = document.getElementById('books');
 overlay.id = 'overlay'; 
 let myLibrary = [
   {
-    title: 'este libro',
-    author: 'este autor',
-    pages: 75,
+    title: 'The Great Gatsby',
+    author: 'F. Scott Fitzgerald',
+    pages: 180,
     readed: 'Yes',
   },
   {
-    title:'100 años de soledad',
-    author:'Miguel Garcia Marquez',
-    pages:500,
-    readed: 'Yes',
-  },
-  {
-    title:'Les Miserables',
-    author:'Victor Hugo',
-    pages: 1000,
+    title: 'To Kill a Mockingbird',
+    author: 'Harper Lee',
+    pages: 280,
     readed: 'No',
   },
+  {
+    title: 'Pride and Prejudice',
+    author: 'Jane Austen',
+    pages: 250,
+    readed: 'Yes',
+  }
 ];
 
 

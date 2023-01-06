@@ -106,6 +106,8 @@ body{
 }
 .card h2{
     margin-top: 0px;
+    max-width: 90%;
+    margin: 0 auto;
 }
 .card *{
     margin-top: 10px;
